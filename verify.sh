@@ -30,6 +30,16 @@ function install_ffmpeg() {
     echo "ffmpeg installed"
 }
 
+function install_stunnel() {
+    echo "Updating apt-get..."
+    sudo apt-get -qqy update
+    echo "Installing stunnel..."
+    sudo apt-get install stunnel4 -y
+    echo "ffmpeg stunnel"
+}
+
+
+
 function install_jmeter() {
     # ------------------------------------------------
     #      Decide where to download jmeter from
