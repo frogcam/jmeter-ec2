@@ -45,6 +45,18 @@ function install_ping(){
     echo "replace_ping.sh installed"
 }
 
+function install_address(){
+    echo "Download add_address_delievery.sh"
+    wget -q -O ~/add_address_delievery.sh https://s3-eu-west-1.amazonaws.com/archive.sf-dev1.com/test/api/add_address_delievery.sh
+    sudo chmod +x ~/add_address_delievery.sh
+    echo "add_address_delievery.sh installed"
+    
+    echo "Download add_address_invoice.sh"
+    wget -q -O ~/add_address_invoice.sh https://s3-eu-west-1.amazonaws.com/archive.sf-dev1.com/test/api/add_address_invoice.sh
+    sudo chmod +x ~/add_address_invoice.sh
+    echo "add_address_invoice.sh installed"
+}
+
 
 function install_jmeter() {
     # ------------------------------------------------
@@ -100,6 +112,8 @@ fi
 install_ffmpeg
 
 install_ping
+
+install_address
 
 # Done
 echo "software installed"
